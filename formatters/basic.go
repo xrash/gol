@@ -47,6 +47,12 @@ func (f *BasicFormatter) FormatLevel(level gol.LogLevel) string {
 		return "warn"
 	case gol.LEVEL_ERROR:
 		return "error"
+	case gol.LEVEL_NOTICE:
+		return "notice"
+	case gol.LEVEL_ALERT:
+		return "alert"
+	case gol.LEVEL_EMERG:
+		return "emerg"
 	}
 
 	return "unknown"
