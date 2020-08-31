@@ -10,7 +10,7 @@ type WriterHandler struct {
 
 func NewWriterHandler(w io.Writer) *WriterHandler {
 	return &WriterHandler{
-		w,
+		w: w,
 	}
 }
 

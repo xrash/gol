@@ -20,12 +20,11 @@ func NewBasicFormatter() *BasicFormatter {
 
 func (f *BasicFormatter) Format(message string, l gol.LogLevel) string {
 	timestamp := time.Now().Format(TIMESTAMP_FORMAT)
-	level := f.FormatLevel(l)
 
 	params := map[string]string{
 		"%timestamp%": timestamp,
 		"%message%":   message,
-		"%level%":     level,
+		"%level%":     l.String(),
 	}
 
 	line := MESSAGE_FORMAT
@@ -35,25 +34,4 @@ func (f *BasicFormatter) Format(message string, l gol.LogLevel) string {
 	}
 
 	return line
-}
-
-func (f *BasicFormatter) FormatLevel(level gol.LogLevel) string {
-	switch level {
-	case gol.LEVEL_DEBUG:
-		return "debug"
-	case gol.LEVEL_INFO:
-		return "info"
-	case gol.LEVEL_WARN:
-		return "warn"
-	case gol.LEVEL_ERROR:
-		return "error"
-	case gol.LEVEL_NOTICE:
-		return "notice"
-	case gol.LEVEL_ALERT:
-		return "alert"
-	case gol.LEVEL_EMERG:
-		return "emerg"
-	}
-
-	return "unknown"
 }

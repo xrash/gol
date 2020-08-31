@@ -10,7 +10,7 @@ type StdoutHandler struct {
 
 func NewStdoutHandler() *StdoutHandler {
 	return &StdoutHandler{
-		NewWriterHandler(os.Stdout),
+		wh: NewWriterHandler(os.Stdout),
 	}
 }
 

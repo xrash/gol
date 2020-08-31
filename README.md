@@ -4,38 +4,38 @@
 
 * master: [![Build Status](https://travis-ci.org/xrash/gol.svg?branch=master)](http://travis-ci.org/xrash/gol)
 
-# How it works
+# Documentation
 
-`gol` has three elements you must know:
+Go to [http://godoc.org/github.com/xrash/gol](http://godoc.org/github.com/xrash/gol) for complete documentation.
 
- - Formatters;
- - Handlers;
- - The logger;
-
-Here is how to create everything:
+# Fast example
 
 ```go
-logger := gol.NewLogger()
+package main
 
-basicFormatter := formatters.NewBasicFormatter()
-stdoutHandler := handlers.NewStdoutHandler()
+import (
+	"github.com/xrash/gol"
+	"github.com/xrash/gol/formatters"
+	"github.com/xrash/gol/handlers"
+)
 
-logger.AddHandler(stdoutHandler, basicFormatter, gol.LEVEL_DEBUG)
+func main() {
+	logger := gol.NewLogger()
+
+	basicFormatter := formatters.NewBasicFormatter()
+	stdoutHandler := handlers.NewStdoutHandler()
+
+	logger.AddHandler(stdoutHandler, basicFormatter, gol.LEVEL_DEBUG)
+
+	// ...
+
+	logger.Debug("Example %d, level %s", 1, "debug")
+	logger.Notice("Example %d, level %s", 2, "notice")
+	logger.Info("Example %d, level %s", 3, "info")
+	logger.Warn("Example %d, level %s", 4, "warn")
+	logger.Error("Example %d, level %s", 5, "error")
+	logger.Crit("Example %d, level %s", 6, "crit")
+	logger.Alert("Example %d, level %s", 7, "alert")
+	logger.Emerg("Example %d, level %s", 8, "emerg")
+}
 ```
-
-The formatter implements the interface `gol.Formatter`, the handler implements `gol.Handler` and the logger is the struct `gol.Logger`.
-
-# Useful formatters and handlers
-
-There are some useful formatters in the `github.com/xrash/gol/v2/formatters` package, and useful handlers in the `github.com/xrash/gol/v2/handlers` package. Check them out:
-
-Useful formatters:
-
- - github.com/xrash/gol/v2/formatters.BasicFormatter
-
-Useful handlers:
-
- - github.com/xrash/gol/v2/handlers.WriterHandler
- - github.com/xrash/gol/v2/handlers.StdoutHandler
- - github.com/xrash/gol/v2/handlers.FileHandler
- - github.com/xrash/gol/v2/handlers.MemoryQueueHandler
