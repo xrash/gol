@@ -12,9 +12,9 @@ type MemoryQueueHandler struct {
 
 func NewMemoryQueueHandler(minSize, maxSize int) *MemoryQueueHandler {
 	return &MemoryQueueHandler{
-		minSize,
-		maxSize,
-		list.New(),
+		minSize: minSize,
+		maxSize: maxSize,
+		queue:   list.New(),
 	}
 }
 

@@ -11,8 +11,8 @@ type FileHandler struct {
 
 func NewFileHandler(filename string) *FileHandler {
 	return &FileHandler{
-		filename,
-		nil,
+		filename: filename,
+		file: nil,
 	}
 }
 
