@@ -14,9 +14,9 @@ Go to [http://godoc.org/github.com/xrash/gol](http://godoc.org/github.com/xrash/
 package main
 
 import (
-	"github.com/xrash/gol"
-	"github.com/xrash/gol/formatters"
-	"github.com/xrash/gol/handlers"
+	"github.com/xrash/gol/v2"
+	"github.com/xrash/gol/v2/formatters"
+	"github.com/xrash/gol/v2/handlers"
 )
 
 func main() {

@@ -20,7 +20,7 @@ type Logger struct {
 	// ]
 	//
 	// A, B and C are instances of HandlerEntry.
-	// 
+	//
 	// Each key is a LogLevel, and each value stores a slice
 	// of HandlerEntry instances, whose Handler will handle calls
 	// for that specific LogLevel.

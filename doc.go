@@ -1,6 +1,6 @@
 /*
 
-Package gol provides a simple but powerful logging tool, 
+Package gol provides a simple but powerful logging tool,
 useful both in small and large projects.
 
 The main functionality of the package is accessed through a struct
@@ -52,7 +52,7 @@ and a specific level of severity.
 The subdirectory "handlers" contains a bunch of basic and useful
 implementations of Handler.
 
-    import "github.com/xrash/gol/handlers"
+    import "github.com/xrash/gol/v2/handlers"
 
     // ...
 
@@ -70,7 +70,7 @@ before it's passed to the handler.
 The subdirectory "formatters" contains a bunch of basic and useful
 implementations of Formatter.
 
-    import "github.com/xrash/gol/formatters"
+    import "github.com/xrash/gol/v2/formatters"
 
     // ...
 
@@ -84,23 +84,23 @@ Complete example
 Complete example of package usage, with handlers and formatters:
 
     package main
-    
+
     import (
-    	"github.com/xrash/gol"
-    	"github.com/xrash/gol/formatters"
-    	"github.com/xrash/gol/handlers"
+    	"github.com/xrash/gol/v2"
+    	"github.com/xrash/gol/v2/formatters"
+    	"github.com/xrash/gol/v2/handlers"
     )
-    
+
     func main() {
     	logger := gol.NewLogger()
-    
+
     	basicFormatter := formatters.NewBasicFormatter()
     	stdoutHandler := handlers.NewStdoutHandler()
-    
+
     	logger.AddHandler(stdoutHandler, basicFormatter, gol.LEVEL_DEBUG)
-    
+
     	// ...
-    
+
     	logger.Emerg("Example %d, level %s", gol.LEVEL_EMERG, "emerg")
     	logger.Alert("Example %d, level %s", gol.LEVEL_ALERT, "alert")
     	logger.Crit("Example %d, level %s", gol.LEVEL_CRIT, "crit")

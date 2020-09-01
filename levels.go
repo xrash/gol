@@ -17,7 +17,7 @@ const (
 	LEVEL_DEBUG
 )
 
-var LogLevels = []LogLevel {
+var LogLevels = []LogLevel{
 	LEVEL_EMERG,
 	LEVEL_ALERT,
 	LEVEL_CRIT,

@@ -12,7 +12,7 @@ type FileHandler struct {
 func NewFileHandler(filename string) *FileHandler {
 	return &FileHandler{
 		filename: filename,
-		file: nil,
+		file:     nil,
 	}
 }
 

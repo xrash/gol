@@ -2,12 +2,13 @@ package gol
 
 import (
 	"fmt"
-	"testing"
 	"github.com/franela/goblin"
+	"testing"
 )
 
 // `formatterMock` implements the Formatter interface.
 type formatterMock struct{}
+
 func (f *formatterMock) Format(message string, level LogLevel) string {
 	return fmt.Sprintf("%v/%v", message, level)
 }
@@ -17,6 +18,7 @@ func (f *formatterMock) Format(message string, level LogLevel) string {
 type lastLineHandlerMock struct {
 	lastLoggedLine string
 }
+
 func (h *lastLineHandlerMock) Handle(line string) error {
 	h.lastLoggedLine = line
 	return nil
@@ -27,6 +29,7 @@ func (h *lastLineHandlerMock) Handle(line string) error {
 type errorHandlerMock struct {
 	errorToReturn error
 }
+
 func (h *errorHandlerMock) Handle(line string) error {
 	return h.errorToReturn
 }
@@ -63,7 +66,7 @@ func TestIfLevelsAreWorkingCorrectly(t *testing.T) {
 					g.It("Last logged line should be different", func() {
 						g.Assert(lastLoggedLine != expectedLine).IsTrue()
 					})
-				}				
+				}
 			}
 		})
 
