@@ -1,7 +1,7 @@
 package formatters
 
 import (
-	"github.com/xrash/gol"
+	"github.com/xrash/gol/v2"
 	"strings"
 	"time"
 )

@@ -27,15 +27,15 @@ The formatter implements the interface `gol.Formatter`, the handler implements `
 
 # Useful formatters and handlers
 
-There are some useful formatters in the `github.com/xrash/gol/formatters` package, and useful handlers in the `github.com/xrash/gol/handlers` package. Check them out:
+There are some useful formatters in the `github.com/xrash/gol/v2/formatters` package, and useful handlers in the `github.com/xrash/gol/v2/handlers` package. Check them out:
 
 Useful formatters:
 
- - github.com/xrash/gol/formatters.BasicFormatter
+ - github.com/xrash/gol/v2/formatters.BasicFormatter
 
 Useful handlers:
 
- - github.com/xrash/gol/handlers.WriterHandler
- - github.com/xrash/gol/handlers.StdoutHandler
- - github.com/xrash/gol/handlers.FileHandler
- - github.com/xrash/gol/handlers.MemoryQueueHandler
+ - github.com/xrash/gol/v2/handlers.WriterHandler
+ - github.com/xrash/gol/v2/handlers.StdoutHandler
+ - github.com/xrash/gol/v2/handlers.FileHandler
+ - github.com/xrash/gol/v2/handlers.MemoryQueueHandler

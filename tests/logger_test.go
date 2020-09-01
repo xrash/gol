@@ -3,7 +3,7 @@ package tests
 import (
 	"errors"
 	"fmt"
-	"github.com/xrash/gol"
+	"github.com/xrash/gol/v2"
 	"testing"
 )
 
