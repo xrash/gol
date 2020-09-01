@@ -16,7 +16,7 @@ import "github.com/xrash/gol/v2"
 
 Go to [https://godoc.org/github.com/xrash/gol](https://godoc.org/github.com/xrash/gol) for complete documentation.
 
-# Fast example
+# Example
 
 ```go
 package main
