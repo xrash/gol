@@ -22,7 +22,7 @@ func TestBasicFormatter(t *testing.T) {
 
 		g.It("Result should be as expected", func() {
 			r := f.Format("wachacha", gol.LEVEL_DEBUG)
-			expected := "[1969-12-31T21:00:00.000-03:00] [debug] wachacha\n"
+			expected := "[1970-01-01T00:00:00.000Z] [debug] wachacha\n"
 			g.Assert(r).Equal(expected)
 		})
 

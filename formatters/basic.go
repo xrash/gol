@@ -24,7 +24,7 @@ func NewBasicFormatter() *BasicFormatter {
 }
 
 func (f *BasicFormatter) Format(message string, l gol.LogLevel) string {
-	timestamp := f.nowProvider().Format(TIMESTAMP_FORMAT)
+	timestamp := f.nowProvider().UTC().Format(TIMESTAMP_FORMAT)
 
 	params := map[string]string{
 		"%timestamp%": timestamp,
