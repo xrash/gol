@@ -11,15 +11,20 @@ const (
 	MESSAGE_FORMAT   = "[%timestamp%] [%level%] %message%\n"
 )
 
+type nowProvider func() time.Time
+
 type BasicFormatter struct {
+	nowProvider nowProvider
 }
 
 func NewBasicFormatter() *BasicFormatter {
-	return &BasicFormatter{}
+	return &BasicFormatter{
+		nowProvider: time.Now,
+	}
 }
 
 func (f *BasicFormatter) Format(message string, l gol.LogLevel) string {
-	timestamp := time.Now().Format(TIMESTAMP_FORMAT)
+	timestamp := f.nowProvider().Format(TIMESTAMP_FORMAT)
 
 	params := map[string]string{
 		"%timestamp%": timestamp,
