@@ -14,7 +14,7 @@ import "github.com/xrash/gol/v2"
 
 # Documentation
 
-Go to [https://godoc.org/github.com/xrash/gol](https://godoc.org/github.com/xrash/gol) for complete documentation.
+Go to [https://pkg.go.dev/github.com/xrash/gol/v2](https://pkg.go.dev/github.com/xrash/gol/v2) for complete documentation.
 
 # Example
 
