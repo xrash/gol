@@ -1,4 +1,4 @@
-* master: [![Build Status](https://travis-ci.org/xrash/gol.svg?branch=master)](http://travis-ci.org/xrash/gol)
+[![Build Status](https://travis-ci.org/xrash/gol.svg?branch=master)](http://travis-ci.org/xrash/gol)
 
 # gol
 
