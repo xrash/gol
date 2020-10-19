@@ -18,7 +18,7 @@ func TestBasicFormatter(t *testing.T) {
 
 	g := goblin.Goblin(t)
 
-	g.Describe("Basic Formatter tests", func() {
+	g.Describe("BasicFormatter tests", func() {
 
 		g.It("Result should be as expected", func() {
 			r := f.Format("wachacha", gol.LEVEL_DEBUG)
